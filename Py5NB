@@ -1,0 +1,52 @@
+import math as m
+
+def First():
+    a=int(input())
+    return ((a%100!=0) and (a>0) and (a%5==0))
+def Second():
+    k=0
+    for i in range(3):
+        a=int(input())
+        if a%2==0:
+            k+=1
+    return k >= 2
+
+def Third():
+    x=float(input())
+    y=float(input())
+    return (x>=0) and (y<=1) and  ((y>=x-1) or (x**2+y**2<=1))
+
+
+def Fourth():
+    x=float(input())
+    y=float(input())
+    return (y>=0) and (y<=0.5) and (y<m.sin(x))
+
+def Fifth():
+    x=float(input())
+    y=float(input())
+    return (x<=0 and x**2+y**2<=1) or (x>0 and y>=x and x**2+y**2<=1)
+    
+    
+        
+
+    
+while(True):
+    i=int(input())
+    if i==1:
+        print(First())
+        print('//------------------------------//')
+    elif i==2:
+        print(Second())
+        print('//------------------------------//')
+    elif i==3:
+        print(Third())
+        print('//------------------------------//')
+    elif i==4:
+        print(Fourth())
+        print('//------------------------------//')
+    elif i==5:
+        print(Fifth())
+        print('//------------------------------//')
+    elif i==0:
+        break    
